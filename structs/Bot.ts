@@ -32,6 +32,9 @@ export class Bot {
     this.client.on("ready", () => {
       console.log(`${this.client.user!.username} ready!`);
 
+    this.client.user?.setActivity('Rise of Kingdoms', { type: 'PLAYING' });
+
+
       this.registerSlashCommands();
     });
 
