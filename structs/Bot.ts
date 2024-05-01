@@ -31,6 +31,12 @@ export class Bot {
 
     this.client.on("ready", () => {
       console.log(`${this.client.user!.username} ready!`);
+      this.client.user?.setPresence({
+        activity: {
+          name: 'Rise of Kingdoms',
+          type: 'PLAYING',
+        },
+      });
 
 
 
