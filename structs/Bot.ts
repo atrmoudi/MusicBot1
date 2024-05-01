@@ -31,7 +31,7 @@ export class Bot {
 
     this.client.on("ready", () => {
       console.log(`${this.client.user!.username} ready!`);
-      this.client.user?.setPresence({
+      this.client.user.setPresence({
         activities: [{
           name: 'Rise of Kingdom',
           type: 'PLAYING'
