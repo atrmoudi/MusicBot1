@@ -17,6 +17,9 @@ import { config } from "../utils/config";
 import { i18n } from "../utils/i18n";
 import { MissingPermissionsException } from "../utils/MissingPermissionsException";
 import { MusicQueue } from "./MusicQueue";
+import { ActivityType } from 'discord.js';
+
+const activityType: ActivityType = 'PLAYING';
 
 export class Bot {
   public readonly prefix = "/";
@@ -31,10 +34,10 @@ export class Bot {
 
     this.client.on("ready", () => {
       console.log(`${this.client.user!.username} ready!`);
-      this.client.user.setPresence({
+      this.client.user?.setPresence({
         activities: [{
-          name: 'Rise of Kingdom',
-          type: 'PLAYING'
+          name: 'Rise of Kingdoms',
+          type: activityType
         }]
       });
 
